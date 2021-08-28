@@ -10,11 +10,12 @@ jobs:
                 runs-on: ubuntu-latest
                 steps:
                         - name: checkout
-                          uses: actions/checkout@v1
+                          uses: actions/checkout@v2
                           with:
-                                  repository: SvoONs/higher_order_CWENO_boundary_treatment
-                        - name: upload
-                          uses: actions/upload-artifact@v1.0.0
-                          with:
-                                  name: linux
+                                  repository: SvoONs/higher_order_CWENO_boundary_treatment@main
                                   path: ./${{ env.FILE_NAME }}
+                        - name: upload
+                          uses: actions/upload-artifact@2
+                          with:
+                                  name: ${{ env.FILE_NAME }}
+                                  path: .
