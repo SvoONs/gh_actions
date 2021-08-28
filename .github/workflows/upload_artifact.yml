@@ -15,7 +15,7 @@ jobs:
                                   repository: SvoONs/higher_order_CWENO_boundary_treatment@main
                                   path: ./${{ env.FILE_NAME }}
                         - name: upload
-                          uses: actions/upload-artifact@2
+                          uses: actions/upload-artifact@v2
                           with:
                                   name: ${{ env.FILE_NAME }}
                                   path: .
