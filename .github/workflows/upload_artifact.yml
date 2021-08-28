@@ -1,0 +1,20 @@
+name: upload_artifact
+
+on: push
+
+env:
+        FILE_NAME: ho_CWENO_bt
+
+jobs:
+        build:
+                runs-on: ubuntu-latest
+                steps:
+                        - name: checkout
+                          uses: actions/checkout@v1
+                          with:
+                                  repository: SvoONs/higher_order_CWENO_boundary_treatment
+                        - name: upload
+                          uses: actions/upload-artifact@v1.0.0
+                          with:
+                                  name: linux
+                                  path: ./${{ env.FILE_NAME }}
