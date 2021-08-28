@@ -12,8 +12,8 @@ jobs:
                         - name: checkout
                           uses: actions/checkout@v2
                           with:
-                                  repository: SvoONs/higher_order_CWENO_boundary_treatment@main
-                                  path: ./${{ env.FILE_NAME }}
+                                  repository: SvoONs/higher_order_CWENO_boundary_treatment
+                                  ref: main
                         - name: upload
                           uses: actions/upload-artifact@v2
                           with:
